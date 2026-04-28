@@ -64,22 +64,7 @@ git clone https://github.com/noxrepo/pox ~/pox
 
 ```bash
 cp qos_controller.py ~/pox/ext/
-```
 
-## SDN Concepts Demonstrated
-
-| Concept | Location in Code |
-|---------|-----------------|
-| Controller–switch interaction | `_handle_ConnectionUp` |
-| `packet_in` event handling | `_handle_PacketIn` |
-| Match–action rule design | `_install_qos_rules`, `_install_forward_rule` |
-| Proactive rule installation | `_install_qos_rules` (on switch connect) |
-| Reactive MAC learning | `mac_to_port` table in `_handle_PacketIn` |
-| Priority differentiation | `msg.priority` in `ofp_flow_mod` |
-| Flow idle timeouts | `msg.idle_timeout = 30` |
-| Performance measurement | `ping`, `iperf`, `ovs-ofctl dump-ports` |
-
----
 
 ## References
 
